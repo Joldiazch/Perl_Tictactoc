@@ -2,6 +2,10 @@
 
     Tictactoc game build in Perl for Holberton's Hackday.
 
+##Usage
+
+$ perl FILENAME
+
 ## **What about Perl**
 
  Practical Extracting and Reporting Languaje. Is programming language originally developed in 1987 as a general-purpose Unix scripting language; it can be used in a variety of tasks, you can use perl for extracting information from a text file and printing out a report, converting a text file into another form or number of problems as system programming.
