@@ -20,3 +20,5 @@ Also a simple variable declaration:
     $str=”My name is The Machine”;
     print “$str\n”;
     Output: My name is The Machine
+
+## **How to play**
