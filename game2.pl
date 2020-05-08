@@ -10,16 +10,17 @@ my %str = (
 	prompt => sub { "              Player $_[0]'s turn: " },
 	win => sub { "           Player $_[0] is the winner!\n" },
 	tie => "           Tie! No player has won!\n",
-	header => "        Player 1 (O) v/s Player 2 (X)\n\n",
-	#This part allows drawing the board
-	cover => " ___ ___ ___ \n",
-	walls => "|   |   |   |\n",
-	floor => "|___|___|___|\n",
-	cells => sub { "| $_[0] | $_[1] | $_[2] |\n" },
+	header => "        Player 1 (✿) v/s Player 2 (♥)\n\n",
+	# drawing the board
+	cover => "             \n",
+	walls => "    |   |    \n",
+	floor => " ___|___|___ \n",
+    floor2 => "    |   |    \n",
+	cells => sub { "  $_[0] | $_[1] | $_[2]  \n" },
 	leading_space => "                ",
-	1 => "\e[1;34mO\e[m",
-	2 => "\e[1;33mX\e[m",
-    );
+	1 => "\e[1;36m✿\e[m",
+	2 => "\e[1;31m♥\e[m",
+);
 # allows the program to be excecuting permanently with the while loop
 while(1) { print_board(); prompt(); check_winner(); }
 sub print_board
@@ -40,7 +41,7 @@ sub print_board
 		$str{leading_space}, $str{floor},
 		$str{leading_space}, $str{walls},
 		$str{leading_space}, $str{cells}(val(0), val(1), val(2)),
-		$str{leading_space}, $str{floor}, "\n";
+		$str{leading_space}, $str{floor2}, "\n";
 }
 #validates the inputs of the player who's turn is
 sub prompt
@@ -54,7 +55,6 @@ sub prompt
 	$cells[$res - 1] = $who_has_turn;
 	$who_has_turn = 2 - $who_has_turn + 1;  # swap 1 and 2
 }
-#checks the player who won, validating diagonals, columns and rows
 sub check_winner
 {
 	my $w;
@@ -75,11 +75,10 @@ sub check_winner
 #checks every cell
 sub check_cells
 {
-	my ($x, $y, $z) = ($cells[$_[0]], $cells[$_[1]], $cells[$_[2]]);
-	return 0 unless (defined $x && defined $y && defined $z);
-	return ($x == $y && $y == $z)? $x : 0;
+	my ($a, $b, $c) = ($cells[$_[0]], $cells[$_[1]], $cells[$_[2]]);
+	return 0 unless (defined $a && defined $b && defined $c);
+	return ($a == $b && $b == $c)? $a : 0;
 }
 sub finish { print_board(); printf $_[0]; exit(); } #prompt_new_game() #TODO
 sub is_board_full { scalar(grep { defined $_ } @cells) == 9 }
-#closes and clears the table
 sub clear_screen { print "\e[2J\e[H" }
