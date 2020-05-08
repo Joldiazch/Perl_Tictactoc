@@ -24,3 +24,40 @@ Also a simple variable declaration:
     $str=”My name is The Machine”;
     print “$str\n”;
     Output: My name is The Machine
+
+## **How to play**
+
+You have to type the usage command to start the game:
+    user@ubuntu:~/Perl_Tictactoc/Perl_Tictactoc$ perl game
+
+    ┌───┬───┬───┐
+    │ 1 │ 2 │ 3 │
+    ├───┼───┼───┤
+    │ 4 │ 5 │ 6 │
+    ├───┼───┼───┤
+    │ 7 │ 8 │ 9 │
+    └───┴───┴───┘
+    X's move?:
+
+You have to select the position to put de "X" character and tip the number and prees Enter.
+Then, the number is replaced for the "X and "the game will ask "O's" position.
+
+    ┌───┬───┬───┐
+    │ 1 │ 2 │ 3 │
+    ├───┼───┼───┤
+    │ 4 │ X │ 6 │
+    ├───┼───┼───┤
+    │ 7 │ 8 │ 9 │
+    └───┴───┴───┘
+    O's move?:  
+
+
+As a player, you have to do this till the game is over.
+
+    ┌───┬───┬───┐
+    │ X │ X │ O │
+    ├───┼───┼───┤
+    │ 4 │ X │ O │
+    ├───┼───┼───┤
+    │ 7 │ 8 │ O │
+    └───┴───┴───┘
