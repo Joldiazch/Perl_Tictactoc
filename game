@@ -4,13 +4,11 @@ use feature 'state';
 #definition of mark(Players) and board(game) constant variables, only available to be read
 use constant MARKS=>[ 'X', 'O' ];
 use constant BOARD=>'
-┌───┬───┬───┐
-│ 1 │ 2 │ 3 │
-├───┼───┼───┤
-│ 4 │ 5 │ 6 │
-├───┼───┼───┤
-│ 7 │ 8 │ 9 │
-└───┴───┴───┘
+  1 │ 2 │ 3 
+ ───┼───┼───
+  4 │ 5 │ 6 
+ ───┼───┼───
+  7 │ 8 │ 9 
 ';
 # Function that allows access to the variables MARKS and BOARD
 sub get_mark {
