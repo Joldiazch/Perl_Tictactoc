@@ -28,7 +28,9 @@ Also a simple variable declaration:
 ## **How to play**
 
 You have to type the usage command to start the game:
-    user@ubuntu:~/Perl_Tictactoc/Perl_Tictactoc$ perl game.pl
+
+
+user@ubuntu:~/Perl_Tictactoc/Perl_Tictactoc$ perl game.pl
 
         Player 1 (✿) v/s Player 2 (♥)
 
