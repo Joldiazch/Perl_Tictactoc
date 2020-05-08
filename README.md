@@ -28,36 +28,72 @@ Also a simple variable declaration:
 ## **How to play**
 
 You have to type the usage command to start the game:
-    user@ubuntu:~/Perl_Tictactoc/Perl_Tictactoc$ perl game
+    user@ubuntu:~/Perl_Tictactoc/Perl_Tictactoc$ perl game.pl
 
-    ┌───┬───┬───┐
-    │ 1 │ 2 │ 3 │
-    ├───┼───┼───┤
-    │ 4 │ 5 │ 6 │
-    ├───┼───┼───┤
-    │ 7 │ 8 │ 9 │
-    └───┴───┴───┘
-    X's move?:
+        Player 1 (✿) v/s Player 2 (♥)
 
-You have to select the position to put de "X" character and tip the number and prees Enter.
-Then, the number is replaced for the "X and "the game will ask "O's" position.
+                             
+                    |   |    
+                  7 | 8 | 9  
+                 ___|___|___ 
+                    |   |    
+                  4 | 5 | 6  
+                 ___|___|___ 
+                    |   |    
+                  1 | 2 | 3  
+                    |   |    
 
-    ┌───┬───┬───┐
-    │ 1 │ 2 │ 3 │
-    ├───┼───┼───┤
-    │ 4 │ X │ 6 │
-    ├───┼───┼───┤
-    │ 7 │ 8 │ 9 │
-    └───┴───┴───┘
-    O's move?:  
+              Player 1's turn: 
+
+You have to select the position to put dePlayer 1 (✿) and tip the number and prees Enter.
+Then, the number is replaced for the "✿" and "the game will ask "Player 2 (♥)'s" position.
+
+        Player 1 (✿) v/s Player 2 (♥)
+
+                             
+                    |   |    
+                  7 | 8 | 9  
+                 ___|___|___ 
+                    |   |    
+                  4 | ✿ | 6  
+                 ___|___|___ 
+                    |   |    
+                  1 | 2 | 3  
+                    |   |    
+
+              Player 2's turn: 
 
 
-As a player, you have to do this till the game is over.
+As a player, you have to do this till the game is over for example:
 
-    ┌───┬───┬───┐
-    │ X │ X │ O │
-    ├───┼───┼───┤
-    │ 4 │ X │ O │
-    ├───┼───┼───┤
-    │ 7 │ 8 │ O │
-    └───┴───┴───┘
+        Player 1 (✿) v/s Player 2 (♥)
+
+                             
+                    |   |    
+                  7 | 8 | ♥  
+                 ___|___|___ 
+                    |   |    
+                  4 | ✿ | 6  
+                 ___|___|___ 
+                    |   |    
+                  1 | 2 | 3  
+                    |   |    
+
+              Player 1's turn: 
+
+like this until some player wins:
+
+        Player 1 (✿) v/s Player 2 (♥)
+
+                             
+                    |   |    
+                  ✿ | 8 | ♥  
+                 ___|___|___ 
+                    |   |    
+                  4 | ✿ | 6  
+                 ___|___|___ 
+                    |   |    
+                  ♥ | 2 | ✿  
+                    |   |    
+
+           Player 1 is the winner!
