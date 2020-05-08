@@ -75,9 +75,9 @@ sub check_winner
 #checks every cell
 sub check_cells
 {
-	my ($a, $b, $c) = ($cells[$_[0]], $cells[$_[1]], $cells[$_[2]]);
-	return 0 unless (defined $a && defined $b && defined $c);
-	return ($a == $b && $b == $c)? $a : 0;
+	my ($x, $y, $z) = ($cells[$_[0]], $cells[$_[1]], $cells[$_[2]]);
+	return 0 unless (defined $x && defined $y && defined $z);
+	return ($x == $y && $y == $z)? $x : 0;
 }
 sub finish { print_board(); printf $_[0]; exit(); } #prompt_new_game() #TODO
 sub is_board_full { scalar(grep { defined $_ } @cells) == 9 }
